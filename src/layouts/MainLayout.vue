@@ -15,6 +15,17 @@
         <q-toolbar-title> The Hive Mobile App </q-toolbar-title>
 
         <!-- <div>Quasar v{{ $q.version }}</div> -->
+        <div>
+          <q-btn
+            round
+            color="white"
+            icon="login"
+            flat
+            v-if="!isUserLoggedIn()"
+          />
+
+          <q-btn round color="white" icon="refresh" flat />
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -47,7 +58,6 @@ export default defineComponent({
       isUserLoggedIn() {
         const username = $q.localStorage.getItem('username');
         const expiry = $q.localStorage.getItem('expiry');
-        // return true;
         return username !== null && expiry !== null;
       },
     };
