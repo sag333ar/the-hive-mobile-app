@@ -181,4 +181,4 @@ Open `src` Folder from Left - project explorer.
 
 And start developing some cool stuff.
 
-![VSCode with iOS Simulator](../assets/start-building.png)
+![VSCode with iOS Simulator](https://github.com/sag333ar/the-hive-mobile-app/blob/master/docs/assets/start-building.png?raw=true)
