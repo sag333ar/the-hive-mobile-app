@@ -13,57 +13,40 @@
       <div class="text-h5 text-primary text-center">Loading Data</div>
       <div class="text-h6 text-primary text-center">Please wait...</div>
     </div>
-    <h3>hello</h3>
   </q-page>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-// import DHive from 'src/utils/dhive';
-// import { useQuasar } from 'quasar';
+import DHive from 'src/utils/dhive';
 import { HivePostListItemModel } from 'src/components/HivePostListItem/HivePostListItemModel';
 
 import HivePostListItem from 'components/HivePostListItem/HivePostListItem.vue';
 
 export default defineComponent({
   name: 'IndexPage',
-  // created() {
-  //   // this.loadData();
-  // },
+  created() {
+    this.loadData();
+  },
   components: {
     HivePostListItem,
   },
   data() {
-    const items: HivePostListItemModel[] = [
-      {
-        author: 'sagar',
-        body: 'body',
-        category: 'category',
-        children: 50,
-        created: '2023-10-10',
-        curator_payout_value: '10.00 HBD',
-        pending_payout_value: '0.00 HBD',
-        image: '',
-        permlink: 'sagar',
-        post_id: '1212',
-        title: 'title',
-        total_votes: 50,
-      },
-    ];
+    const items: HivePostListItemModel[] = [];
     return {
       items: items,
     };
   },
   methods: {
-    // loadData() {
-    //   DHive.getPostsOfAccount('sagarkothari88')
-    //     .then((response: HivePostListItemModel[]) => {
-    //       this.items = response;
-    //     })
-    //     .catch((e: Error) => {
-    //       console.error(e);
-    //     });
-    // },
+    loadData() {
+      DHive.getPostsOfAccount('sagarkothari88')
+        .then((response: HivePostListItemModel[]) => {
+          this.items = response;
+        })
+        .catch((e: Error) => {
+          console.error(e);
+        });
+    },
   },
   setup() {
     return {};

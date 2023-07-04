@@ -5,7 +5,7 @@ export interface HivePostListItemModel {
   children: number;
   created: string;
   curator_payout_value: string;
-  image: string;
+  // image: string;
   pending_payout_value: string;
   permlink: string;
   post_id: string;
