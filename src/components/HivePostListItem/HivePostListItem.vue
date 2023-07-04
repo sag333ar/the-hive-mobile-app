@@ -69,7 +69,9 @@ export default defineComponent({
     getBetterString(): string {
       return removeMd(this.data.body)
         .replace(/<\/?[^>]+(>|$)/g, '')
-        .substr(1, 200);
+        .substr(0, 200)
+        .replace(/https:\/\/.+\s/g, '')
+        .replace(/http:\/\/.+\s/g, '');
     },
     getAgoDate(): string {
       return moment(this.data.created).fromNow();

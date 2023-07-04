@@ -31,7 +31,7 @@ class DHive {
             item.json_metadata.hasOwnProperty('image') &&
             item.json_metadata.image.length > 0
               ? item.json_metadata.image[0]
-              : 'https://images.hive.blog/256x512/https://files.pea…rAQd8nbjGXTTaQewPTgcenWWaxMsGxDZFcGTd2r4T5YcG.jpg',
+              : 'https://images.hive.blog/p/AmRc67RgYaWTamZtjiRVK9pxDgRdg2RtnXmG5dbeGuzK3WNfkBktwpfi3UhQYZEvm6HgB4fnK2SbCmNMasmddEq2ex1sDFGXTXMjeVcZqQcLY1N6UAdnbe7wHKvJX4a6rTb6gHTwS2heuN3m8ZCCHDkEggXGJZnW?format=match&mode=fit&width=256&height=512',
           pending_payout_value: item.pending_payout_value,
           permlink: item.permlink,
           post_id: item.post_id,
